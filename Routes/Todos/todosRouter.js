@@ -95,4 +95,19 @@ router.delete("/:id", auth, async (req, res) => {
   }
 });
 
+router.patch("/isCompleted/:id", auth, async (req, res) => {
+  try {
+    const user = req.user;
+    let todo = await Todo.findOneAndUpdate(
+      { _id: req.params.id, user_id: user._id },
+      { completed: !completed }
+    ).save();
+
+    return res.send(todo);
+  } catch (error) {
+    console.log(chalk.redBright("Could not edit like:", error.message));
+    return res.status(500).send(error);
+  }
+});
+
 module.exports = router;
