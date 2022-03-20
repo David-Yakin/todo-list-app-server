@@ -112,3 +112,11 @@ You will need to provide a token to get an answer from this api
 ```
 
 You will need to provide a token to get an answer from this api
+
+#### To change todo isComplete status
+
+```http
+  PATCH /api/todos/isCompleted/:id
+```
+
+You will need to provide a token to get an answer from this api

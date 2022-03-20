@@ -100,7 +100,7 @@ router.patch("/isCompleted/:id", auth, async (req, res) => {
     const user = req.user;
     let todo = await Todo.findOneAndUpdate(
       { _id: req.params.id, user_id: user._id },
-      { completed: !completed }
+      { isCompleted: !isCompleted }
     ).save();
 
     return res.send(todo);
