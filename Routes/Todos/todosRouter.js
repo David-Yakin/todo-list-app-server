@@ -37,6 +37,7 @@ router.post("/", auth, async (req, res) => {
     }
 
     todo.user_id = req.user._id;
+    todo.sharedWith = [req.user._id];
     todo = new Todo(todo);
 
     todo = await todo.save();

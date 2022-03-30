@@ -26,6 +26,7 @@ const data = {
       user_id: "621f3f27dde069e62aa3bcab",
       dueDate: new Date(2022, 07, 24, 10, 30, 00, 0),
       inResponsibilityOf: "David Yakin",
+      sharedWith: [],
     },
     {
       title: "Second Todo",
@@ -36,6 +37,7 @@ const data = {
       dueDate: new Date(2022, 06, 20, 10, 30, 00, 0),
       remarks: "Do Not fuck it up!",
       inResponsibilityOf: "Shoshi Yakin",
+      sharedWith: [],
     },
     {
       title: "Third Todo",
@@ -45,6 +47,7 @@ const data = {
       user_id: "621f3f27dde069e62aa3bcab",
       dueDate: new Date(2022, 01, 01, 10, 30, 00, 0),
       inResponsibilityOf: "Ruhama golan",
+      sharedWith: [],
     },
   ],
 };

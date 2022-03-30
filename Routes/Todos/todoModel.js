@@ -55,6 +55,7 @@ const todoSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
   },
+  sharedWith: [String],
 });
 
 const Todo = mongoose.model("todo", todoSchema);
